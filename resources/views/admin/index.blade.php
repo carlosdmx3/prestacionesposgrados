@@ -81,7 +81,6 @@
         </ol> 
         <br>
 
-
         @livewire('solicitudes-component')
 
     </div>
