@@ -228,7 +228,7 @@
                     <p><div>
                     <button class="btn btn-outline-dark bg-success btn-sm"
                             title="Aprobar Solicitud de {{ ucfirst(strtolower($docente->oapellidopaterno)).' '.ucfirst(strtolower($docente->oapellidomaterno)).' '.ucfirst(strtolower($docente->name)) }}">
-                        Aceptar  <i class="far fa-bookmark" style="font-size:16px;"></i>
+                        Aceptar &nbsp; <i class="far fa-bookmark" style="font-size:16px;"></i>
                     </button>
                     </div></p> 
                 </td>
