@@ -68,15 +68,17 @@
     </div>
 
     <div class="card-body table-responsive guinda" >
-        <li>
+        <ol>
+            <li>
             Revisa y verifica los requisitos; que sean documentos legibles y correctos.
-        </li>
-        <li>
-            Válida la solicitud con el botón de validar que corresponde a cada solicitante.
-        </li>
-        <li>
-            Si los requisitos estan validados, aprueba/rechaza la solicitud del docente con el botón de <b>Validar</b> si además cumple con los criterios establecidos.
-        </li>
+            </li>
+            <li>
+                Válida la solicitud con el botón de validar que corresponde a cada solicitante.
+            </li>
+            <li>
+                Si los requisitos estan validados, aprueba/rechaza la solicitud del docente con el botón de <b>Validar</b> si además cumple con los criterios establecidos.
+            </li>
+        </ol>
         <br>
 
 
