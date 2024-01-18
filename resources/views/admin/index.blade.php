@@ -69,7 +69,13 @@
 
     <div class="card-body table-responsive guinda" >
         <li>
-            Registro de solicitudes de docentes a programas de posgrado
+            Revisa y verifica los requisitos; que sean documentos legibles y correctos.
+        </li>
+        <li>
+            Válida la solicitud con el botón de validar que corresponde a cada solicitante.
+        </li>
+        <li>
+            Si los requisitos estan validados, aprueba/rechaza la solicitud del docente con el botón de <b>Validar</b> si además cumple con los criterios establecidos.
         </li>
         <br>
 
