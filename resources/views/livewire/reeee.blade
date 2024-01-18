@@ -1,0 +1,51 @@
+<div>
+
+
+@php($data = file_get_contents("http://10.15.10.93/vales/1/2/json/file.json"))
+@php($products = json_decode($data, true))
+
+@foreach ($products as $product) 
+    @json($product)
+@endforeach
+
+    <table class="table table-sm col-sm-12 guinda letraa">
+    <tr>
+        <td align="right" class="bg-light" width="20%">
+            <b>Formación Académica:</b>
+        </td>
+        <td width="70%">
+            <input  type="radio" name="formacion" 
+                    value="9" 
+                    autocomplete="off"
+                    wire:model="formacionx"> 
+                <span class="letraa">Todas</span>
+            @foreach($formaciones as $formacion)
+            <input  type="radio" name="formacion" 
+                    value="{{ $formacion->id_formacion }}" 
+                    autocomplete="off" 
+                    wire:model="formacionx"> 
+                <span class="letraa">{{ $formacion->oformacion }}</span>
+            @endforeach
+        </td>
+    </tr>
+     <tr>
+        <td align="right" class="bg-light" width="20%">
+            <b>Prestacion:</b>
+        </td>
+        <td width="70%" wire:model="formacionx">
+           {{ $formacionx }}
+            @foreach($prestaciones as $prestacion)
+            <input  type="radio" name="prestacion" 
+                    value="{{ $prestacion->oprestacion }}" 
+                    autocomplete="off" > 
+                <span class="letraa">{{ $prestacion->oprestacion }}</span>
+            @endforeach
+        </td>
+    </tr>
+    </table>
+
+@include('contentProgramas')
+
+
+
+</div>
