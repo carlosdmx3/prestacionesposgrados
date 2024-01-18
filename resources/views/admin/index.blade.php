@@ -78,7 +78,7 @@
             <li>
                 Si los requisitos estan validados, aprueba/rechaza la solicitud del docente con el botón de <b>Validar</b> si además cumple con los criterios establecidos.
             </li>
-        </ol>
+        </ol> 
         <br>
 
 
