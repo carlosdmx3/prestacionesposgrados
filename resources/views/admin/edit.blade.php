@@ -27,7 +27,7 @@
     <div class="card-header bg-light shadow-sm d-flex mb-2">
         <div class="d-flex justify-content-between"></div>
             <b><i class="fas fa-file-invoice dorado"></i>&nbsp;
-                <span class="guinda" style="font-size:12px;">
+                <span class="guinda" >
                 	Solicitud de registro de:&nbsp; 
                 	<b> {{ $user->oapellidopaterno.' '.$user->oapellidomaterno.' '.$user->name }} </b>
                 </span>

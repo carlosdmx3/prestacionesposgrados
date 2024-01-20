@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="card-body table-responsive guinda" >
-        <ul style="font-size:12px;">
+        <ul style="font-size:14px;">
             <li>
                 Aqui podrás ver las prestaciones que has solicitado. 
             </li> 
@@ -71,8 +71,8 @@
         <tr class="table-secondary guinda2">
             <th>#</th>
             <th>Folio</th>
-            <th>Período</th>
             <th>Prestación</th>
+            <th>Período</th>
             <th>Beneficio</th>
             <th>Estado</th>
         </tr>
@@ -90,14 +90,15 @@
             </td>
             
             <td>
+               {{ $detallePr->oprestacion }}
+               <br>
+               {{ $detallePr->omodalidad_ps }}
+            </td>
+
+            <td>
                {{ $detallePr->oduracion }}
                <br>
                {{ $detallePr->operiodo_inicio }} - {{ $detallePr->operiodo_fin }}
-            </td>
-            
-            <td>
-               {{ $detallePr->oprestacion }}
-               {{ $detallePr->omodalidad_ps }}
             </td>
             
             <td align="center" style="cursor:pointer;">

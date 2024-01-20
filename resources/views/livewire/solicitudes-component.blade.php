@@ -3,19 +3,19 @@
 
     <table 	class="table table-striped table-hover table-sm table-bordered"
     		style="font-size:14px;">
-    	<thead class="colorBG2" align="center" >
-    		<tr>
-    			<th> <b>#</b> </th>
-    			<th> <b>Nombre del docente</b> </th>
-    			<th> <b>RFC y CURP</b> </th>
-    			<th> <b>Centro(s) de trabajo</b> </th>
-                <th> <b>Ver los datos</b> </th>
+    	<thead class="colorBG2" align="center">
+    		<tr >
+    			<th style="vertical-align: middle;" > <b>#</b> </th>
+    			<th style="vertical-align: middle;" > <b>Nombre del docente</b> </th>
+    			<th style="vertical-align: middle;" > <b>RFC y CURP</b> </th>
+    			<th style="vertical-align: middle;" > <b>Centro(s) de trabajo</b> </th>
+                <th style="vertical-align: middle;" > <b>Ver todos los datos</b> </th>
 
-                <th> <b>Pre registro</b> </th>
-                <th> <b>Requisitos</b> </th>   			
-    			<th> <b>Validar</b> </th>
-                <th> <b>Aprobacíon</b> </th>
-                <th> <b>Estado</b> </th>
+                <th style="vertical-align: middle;" > <b>Formato de preregistro</b> </th>
+                <th style="vertical-align: middle;" > <b>Documentos requisitos</b> </th>   			
+    			<th style="vertical-align: middle;" > <b>Validar requisitos</b> </th>
+                <th style="vertical-align: middle;" > <b>Aprobacíon</b> </th>
+                <th style="vertical-align: middle;" > <b>Estatus</b> </th>
     		</tr>
     	</thead>
     	<tbody>
@@ -23,7 +23,7 @@
         @foreach($docentes as $docente)
         @php($count++)
     		<tr>
-    			<td align="right" width="3%">
+    			<td align="right" width="5%">
     				{{ $count }} &nbsp;
     			</td>
 
@@ -37,7 +37,7 @@
     				{{ $docentes2->ocurp }}
     			</td>
 
-    			<td width="25%"> 
+    			<td width="17%"> 
                     	{{ $centros->oct1 }} - {{ $centros->onombre_ct1 }} 
                     	
 	                    @if($centros->oct2 && $centros->onombre_ct2)
@@ -52,16 +52,16 @@
                     <a 	href="{{ route('admin.edit', $docentes2->id ) }}"
                     	class="btn btn-outline-dark bg-blue btn-sm"
                         title="Ver datos de {{ ucfirst(strtolower($docentes2->oapellidopaterno)).' '.ucfirst(strtolower($docentes2->oapellidomaterno)).' '.ucfirst(strtolower($docentes2->name)) }}">
-                        ver &nbsp; <i class="fas fa-id-badge" style="font-size:18px;"></i>
+                        ver &nbsp; <i class="fas fa-id-badge" style="font-size:20px;"></i>
                     </a>
                 	</div></p>
                 </td>
 
-                <td align="center"  width="8%">
+                <td align="center"  width="10%">
                 	<p><div>
                     <button class="btn btn-outline-dark bg-lightblue btn-sm"
                             title="Ver formato de pre registro: {{ ucfirst(strtolower($docente->oapellidopaterno)).' '.ucfirst(strtolower($docente->oapellidomaterno)).' '.ucfirst(strtolower($docente->name)) }}">
-                        ver &nbsp; <i class="far fa-file-pdf" style="font-size:16px;"></i>
+                        ver &nbsp; <i class="far fa-file-pdf" style="font-size:20px;"></i>
                     </button> 
                     </div></p>  
                 </td>
@@ -71,7 +71,7 @@
                     <button class="btn btn-outline-dark bg-purple btn-sm"
                             data-toggle="modal" href="#modal-id{{ $docentes2->id }}"
                             title="Ver requisitos de {{ ucfirst(strtolower($docentes2->oapellidopaterno)).' '.ucfirst(strtolower($docentes2->oapellidomaterno)).' '.ucfirst(strtolower($docentes2->name)) }}">
-                            ver &nbsp; <i class="fa fa-copy" style="font-size:16px;"></i>
+                            Ver &nbsp; <i class="far fa-folder-open" style="font-size:20px;"></i>
                     </button>
                     </div></p>
 
@@ -188,12 +188,12 @@
 
                 </td>
     			
-    			<td align="center"  width="8%">
+    			<td align="center"  width="10%">
     				<p><div>
                     <button class="btn btn-outline-secondary bg-lime btn-sm"
                             data-toggle="modal" href="#modal-idx{{ $docentes2->id }}"
                             title="Aprobar Solicitud de {{ ucfirst(strtolower($docente->oapellidopaterno)).' '.ucfirst(strtolower($docente->oapellidomaterno)).' '.ucfirst(strtolower($docente->name)) }}">
-                        Validar <i class="fa fa-check-square" style="font-size:14px;"></i>
+                        Validar <i class="fa fa-check-square" style="font-size:20px;"></i>
                     </button>
                 	</div></p>
 
@@ -224,16 +224,16 @@
                     </div>
     			</td> 
 
-                <td align="center"  width="8%">
+                <td align="center"  width="10%">
                     <p><div>
                     <button class="btn btn-outline-dark bg-success btn-sm"
                             title="Aprobar Solicitud de {{ ucfirst(strtolower($docente->oapellidopaterno)).' '.ucfirst(strtolower($docente->oapellidomaterno)).' '.ucfirst(strtolower($docente->name)) }}">
-                        Validar &nbsp; <i class="far fa-bookmark" style="font-size:16px;"></i>
+                        Dictamen <i class="far fa-bookmark" style="font-size:20px;"></i>
                     </button>
                     </div></p> 
                 </td>
 
-                <td align="center" width="5%">
+                <td align="center" width="10%">
                     @if($docente->oaprobacion==1)
                     <p>
                         <div class="alert-success" >
